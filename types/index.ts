@@ -1,3 +1,4 @@
+import { Stringifier } from "postcss";
 import { MouseEventHandler } from "react";
 
 export interface CustomButtonProps {
@@ -5,4 +6,13 @@ export interface CustomButtonProps {
   containerStyles?: string;
   handleClick?: MouseEventHandler<HTMLButtonElement>;
   btnType?: "button" | "summit";
+}
+
+export interface CustomFilterProps {
+  title: string;
+}
+
+export interface SearchManufacturerProps {
+  manufacturer: string;
+  setManufacturer: (manufacturer: string) => void;
 }
