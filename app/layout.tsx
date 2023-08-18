@@ -14,6 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <link rel="icon" href="/app-logo.svg" sizes="any" />
       <body className="relative">
         <Nav />
         {children}
