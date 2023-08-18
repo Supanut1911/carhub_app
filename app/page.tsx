@@ -56,7 +56,7 @@ export default function Home() {
           <p>Explore the cars you might like</p>
         </div>
         <div className="home__filters">
-          <SearchBar setManufacturer={setManufacturer} setMode={setModel} />
+          <SearchBar setManufacturer={setManufacturer} setModel={setModel} />
           <div className="home__filter-container">
             <CustomFilter title="fuel" options={fuels} setFilter={setFuel} />
             <CustomFilter
@@ -70,7 +70,7 @@ export default function Home() {
           <section>
             <div className="home__cars-wrapper">
               {allCars?.map((car: CarProps) => {
-                return <CarCard key={car.city_mpg} car={car} />;
+                return <CarCard key={car.city_mpg + car.model} car={car} />;
               })}
             </div>
 
