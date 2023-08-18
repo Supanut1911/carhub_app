@@ -13,6 +13,7 @@ export interface CustomButtonProps {
 
 export interface CustomFilterProps {
   title: string;
+  setFilter: any;
 }
 
 export interface SearchManufacturerProps {
