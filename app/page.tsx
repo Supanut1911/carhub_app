@@ -36,7 +36,9 @@ export default async function Home({
           <section>
             <div className="home__cars-wrapper">
               {allcars?.map((car: CarProps) => {
-                return <CarCard key={car.city_mpg} car={car} />;
+                console.log("car=>", car);
+
+                return <CarCard key={car.city_mpg + car.model} car={car} />;
               })}
             </div>
             <ShowMore

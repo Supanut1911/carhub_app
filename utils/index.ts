@@ -9,11 +9,13 @@ export const fetchCars = async (filter: FilterProps) => {
   const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fule}`;
   const headers = {
     "X-RapidAPI-Key": process.env["X_RapidAPI_Key"] ?? "",
-    "X-RapidAPI-Host": process.env["X_RapidAPI_Host"] ?? "",
+    "X-RapidAPI-Host": process.env["X_RapidAPI_Key"] ?? "",
   };
 
   const response = await fetch(url, { headers: headers });
   const result = await response.json();
+  console.log("🚀 ~ file: index.ts:17 ~ fetchCars ~ result:", result);
+
   return result;
 };
 
