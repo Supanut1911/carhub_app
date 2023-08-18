@@ -1,11 +1,12 @@
-import { CarProps } from "@/types";
+import { CarProps, FilterProps } from "@/types";
 
 const basePricePerDay = 50; // Base rental price per day in dollars
 const mileageFactor = 0.1; // Additional rate per mile driven
 const ageFactor = 0.05; // Additional rate per year of vehicle age
 
-export const fetchCars = async () => {
-  const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=aventador`;
+export const fetchCars = async (filter: FilterProps) => {
+  const { manufacturer, year, fule, limit, model } = filter;
+  const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fule}`;
   const headers = {
     "X-RapidAPI-Key": process.env["X-RapidAPI-Key"] ?? "",
     "X-RapidAPI-Host": process.env["X-RapidAPI-Host"] ?? "",
