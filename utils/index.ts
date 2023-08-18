@@ -5,7 +5,7 @@ const mileageFactor = 0.1; // Additional rate per mile driven
 const ageFactor = 0.05; // Additional rate per year of vehicle age
 
 export const fetchCars = async () => {
-  const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=carrera`;
+  const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=aventador`;
   const headers = {
     "X-RapidAPI-Key": process.env["X-RapidAPI-Key"] ?? "",
     "X-RapidAPI-Host": process.env["X-RapidAPI-Host"] ?? "",
