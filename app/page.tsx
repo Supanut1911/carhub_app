@@ -44,7 +44,7 @@ export default function Home() {
 
   useEffect(() => {
     getCars();
-  }, [manufacturer, model, year, model, fuel]);
+  }, [manufacturer, model, year, model, fuel, limit]);
 
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
   return (
