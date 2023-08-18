@@ -5,11 +5,11 @@ const mileageFactor = 0.1; // Additional rate per mile driven
 const ageFactor = 0.05; // Additional rate per year of vehicle age
 
 export const fetchCars = async (filter: FilterProps) => {
-  const { manufacturer, year, fule, limit, model } = filter;
-  const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fule}`;
+  const { manufacturer, year, fuel, limit, model } = filter;
+  const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fuel}`;
   const headers = {
-    "X-RapidAPI-Key": process.env["X_RapidAPI_Key"] ?? "",
-    "X-RapidAPI-Host": process.env["X_RapidAPI_Host"] ?? "",
+    "X-RapidAPI-Key": process.env["NEXT_PUBLIC_X_RapidAPI_Key"] ?? "",
+    "X-RapidAPI-Host": process.env["NEXT_PUBLIC_X_RapidAPI_Host"] ?? "",
   };
 
   const response = await fetch(url, { headers: headers });
