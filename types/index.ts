@@ -41,6 +41,8 @@ export interface FilterProps {
   fule: string;
   limit: number;
   model: string;
+  pageNumber?: number;
+  isNext?: boolean;
 }
 
 interface OptionProps {
@@ -51,4 +53,9 @@ interface OptionProps {
 export interface CustomFilterProps {
   title: string;
   options: OptionProps[];
+}
+
+export interface ShowmoreProps {
+  pageNumber: number;
+  isNext: boolean;
 }
